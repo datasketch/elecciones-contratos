@@ -1,6 +1,6 @@
 # elecciones-contratos
 
-> Cuentas claras
+> Desarrollada a partir de un proceso de construcción colectiva innovador desarrollado por Transparencia por Colombia, la Corporación Somos Más, Datasketch, y el Centro de Innovación Pública Digital de MinTIC.
 
 ## Build Setup
 
@@ -11,13 +11,9 @@ $ npm install # Or yarn install
 # serve with hot reload at localhost:3000
 $ npm run dev
 
-# build for production and launch server
-$ npm run build
-$ npm start
-
 # generate static project
 $ npm run generate
+
+# deploy
+$ npm run deploy # unix
 ```
-
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
-
