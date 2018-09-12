@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'Nixie One Regular';
+  src: url(~/assets/fonts/NixieOne-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Maven Pro Regular';
+  src: url(~/assets/fonts/MavenPro-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Maven Pro Medium';
+  src: url(~/assets/fonts/MavenPro-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Maven Pro Bold';
+  src: url(~/assets/fonts/MavenPro-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Maven Pro Black';
+  src: url(~/assets/fonts/MavenPro-Black.ttf);
+  font-weight: 900;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  font-family: 'Maven Pro Regular', sans-serif;
+  font-size: 16px;
+  height: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.title {
+  color: #110066;
+  font-family: 'Nixie One Regular', cursive;
+  text-transform: uppercase;
+}
