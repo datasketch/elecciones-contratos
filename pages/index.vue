@@ -387,5 +387,8 @@ export default {
   .search__input {
     width: 80%;
   }
+  .search span {
+    margin: 10px;
+  }
 }
 </style>
