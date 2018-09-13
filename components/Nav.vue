@@ -1,11 +1,15 @@
 <template>
-  <nav class="line nav">
+  <nav class="line nav align-start">
+    <div class="burger__container">
+      <Burger :onclick="openMenu"/>
+    </div>
     <nuxt-link class="nav__link" to="/">Inicio</nuxt-link>
     <nuxt-link class="nav__link" to="/candidatos">Candidatos</nuxt-link>
     <nuxt-link class="nav__link" to="/financiadores">Financiadores</nuxt-link>
     <nuxt-link class="nav__link" to="/explora">Explora</nuxt-link>
     <nuxt-link class="nav__link" to="/datos">Datos</nuxt-link>
     <nuxt-link class="nav__link" to="/nosotros">Nosotros</nuxt-link>
+    <div class="nav__spacer"></div>
     <div class="nav__actions line v-centered">
       <a href="https://twitter.com/transparenciaco" target="_blank" class="twitter icon"><font-awesome-icon :icon="['fab', 'twitter']"></font-awesome-icon></a>
       <a href="http://facebook.com/transparenciaporcolombia" target="_blank" class="facebook icon"><font-awesome-icon :icon="['fab', 'facebook-f']"></font-awesome-icon></a>
@@ -15,8 +19,11 @@
 </template>
 
 <script>
+import Burger from '~/components/Burger'
+
 export default {
   name: 'Nav',
+  components: { Burger },
   data () {
     return {
       modal: {
@@ -29,6 +36,9 @@ export default {
     }
   },
   methods: {
+    openMenu (event) {
+      event.target.classList.toggle('active')
+    },
     openModal () {
       this.$swal(this.modal)
     },
@@ -72,8 +82,13 @@ export default {
 </script>
 
 <style scoped>
+.burger__container {
+  padding: 15px 15px 15px 0;
+}
+
 .nav {
   background: #ffffff;
+  padding: 0 5%;
   position: sticky;
   top: 0px;
   z-index: 1;
@@ -84,17 +99,21 @@ export default {
   font-family: 'Maven Pro Bold', sans-serif;
   padding: 15px;
   text-decoration: none;
+  display: none;
 }
 
 .nav__link.nuxt-link-exact-active.nuxt-link-active {
   border-bottom: 5px solid #B1C2DE;
 }
 
+.nav__spacer {
+  flex: 1 0 auto;
+}
+
 .nav__actions {
   position: fixed;
   top: 0;
-  right: 10%;
-  z-index: 2;
+  right: 5%;
 }
 
 .facebook {
@@ -113,5 +132,14 @@ export default {
 img {
   max-width: 100px;
   cursor: pointer;
+}
+
+@media screen and (min-width: 992px) {
+  .burger__container {
+    display: none;
+  }
+  .nav__link {
+    display: block;
+  }
 }
 </style>

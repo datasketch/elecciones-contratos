@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'Result Card',
+  name: 'ResultCard',
   props: {
     person: {
       type: Object,

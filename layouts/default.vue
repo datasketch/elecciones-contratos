@@ -1,5 +1,5 @@
 <template>
-  <div id="wrapper" class="column container">
+  <div id="wrapper" class="column">
     <Nav />
     <nuxt/>
     <Footer />

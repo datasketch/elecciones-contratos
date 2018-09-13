@@ -1,6 +1,6 @@
 <template>
   <main class="item-fill">
-    <div class="banner">
+    <div class="banner container">
       <div class="banner__title">
         <h1 class="title">Elecciones y contratos</h1>
         <div class="banner__icons line v-centered">
@@ -14,7 +14,7 @@
         <p>Es una solución tecnológica que permite conocer datos acerca de quienes fueron candidatos al Congreso en 2018 y de los aportantes a sus campañas. Este prototipo busca aportar al control social facilitando la realización de cruces de información, entre datos oficiales de financiación de campañas electorales suministrados por Cuentas Claras, y datos de contratación pública oficiales suministrados por SECOP.</p>
       </div>
     </div>
-    <div class="findings">
+    <div class="findings container">
       <h1 class="title">Hallazgos</h1>
       <div class="findings__content">
         <div class="findings__description">
@@ -33,7 +33,7 @@
         </div>
       </div>
     </div>
-    <div class="recommended">
+    <div class="recommended container__inner">
       <div class="recommended__title">
         <h1 class="title">Recomendados</h1>
         <div class="legends">
@@ -68,16 +68,16 @@
         </a>
       </div>
     </div>
-    <div class="search">
-      <h1 class="title line centered">
+    <div class="search container__inner">
+      <h1 class="title line centered nowrap">
         <img src="~/assets/images/search.png" alt="Lupa" width="50">
-        Busca por nombre o cédula
+        <span>Busca por nombre o cédula</span>
       </h1>
       <input type="text" @keyup="filter" class="search__input" v-model="search" placeholder="Escribe nombre o cédula del candidato">
     </div>
     <transition name="results">
-      <div class="results" v-if="list.length">
-        <result-card v-for="(person, index) in list" :key="index" :person="person"></result-card>
+      <div class="results">
+        <result-card v-if="list.length" v-for="(person, index) in list" :key="index" :person="person"></result-card>
       </div>
     </transition>
   </main>
@@ -120,6 +120,7 @@ export default {
         this.list = []
         return
       }
+
       debounce(this.lookup, 500)()
     },
     lookup () {
@@ -205,7 +206,7 @@ export default {
 
 .tabs-component-tabs {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   list-style-type: none;
   padding: 0;
@@ -268,6 +269,7 @@ export default {
   grid-template-rows: repeat(2, auto);
   grid-template-areas: 'legend' 'photos';
   padding: 40px 20px;
+  grid-gap: 20px;
 }
 
 .recommended__title {
@@ -288,7 +290,7 @@ export default {
 
 .recommended__photo {
   border-radius: 50%;
-  max-width: 100px;
+  max-width: 60px;
 }
 
 .recommended__photos a {
@@ -317,7 +319,7 @@ export default {
   font-size: 18px;
   margin: 20px auto;
   padding: 10px;
-  width: 80%;
+  width: 100%;
 }
 
 .results {
@@ -363,6 +365,9 @@ export default {
   .suffix {
     font-size: 14px;
   }
+  .tabs-component-tabs {
+    flex-direction: row;
+  }
   .tabs-component-tab-a {
     font-size: 16px;
   }
@@ -374,6 +379,13 @@ export default {
   }
   .recommended__title {
     align-self: center;
+  }
+  .recommended__photo {
+    border-radius: 50%;
+    max-width: 100px;
+  }
+  .search__input {
+    width: 80%;
   }
 }
 </style>

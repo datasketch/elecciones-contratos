@@ -1,14 +1,16 @@
 <template>
   <footer>
-    <div class="logos">
-      <div class="media">
-        <img src="~/assets/images/gobierno_mintic.png" alt="Gobierno, MinTic">
+    <div class="container">
+      <div class="logos">
+        <div class="media">
+          <img src="~/assets/images/gobierno_mintic.png" alt="Gobierno, MinTic">
+        </div>
+        <div class="media">
+          <img src="~/assets/images/centro_de_innnovacion.png" alt="Centro de Innovación">
+        </div>
       </div>
-      <div class="media">
-        <img src="~/assets/images/centro_de_innnovacion.png" alt="Centro de Innovación">
-      </div>
+      <p>Acciónate fue desarrollada a partir de un proceso de construcción colectiva innovador desarrollado por Transparencia por Colombia, la Corporación Somos Más, Datasketch, y el Centro de Innovación Pública Digital de MinTIC.</p>
     </div>
-    <p>Acciónate fue desarrollada a partir de un proceso de construcción colectiva innovador desarrollado por Transparencia por Colombia, la Corporación Somos Más, Datasketch, y el Centro de Innovación Pública Digital de MinTIC.</p>
   </footer>
 </template>
 

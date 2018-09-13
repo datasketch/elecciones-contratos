@@ -50,10 +50,16 @@ body {
   margin: 0 auto;
 }
 
+.container__inner {
+  padding-left: 5% !important;
+  padding-right: 5% !important;
+}
+
 .title {
   color: #110066;
   font-family: 'Nixie One Regular', cursive;
   text-transform: uppercase;
+  font-size: 25px;
 }
 
 .text-center {
@@ -98,4 +104,10 @@ body {
 
 .entity__name {
   font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 32px;
+  }
 }
