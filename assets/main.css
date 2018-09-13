@@ -59,3 +59,43 @@ body {
 .text-center {
   text-align: center;
 }
+
+.swal-title {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21);
+  margin: 0 0 15px !important;
+  text-align: left;
+  font-family: 'Maven Pro Regular', cursive;
+  font-weight: 400
+}
+
+.swal-content {
+  text-align: left;
+}
+
+.modal__title {
+  color: #110066;
+  font-family: 'Nixie One Regular', cursive;
+  margin: 0 0 15px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.entities {
+  list-style-type: none;
+  margin: 0 0 15px;
+  padding: 0;
+}
+
+.entity {
+  padding: 0 0 10px;
+  border-bottom: 1px solid #ececec;
+  margin: 0 0 10px;
+}
+
+.entities .entity:nth-last-child(1) {
+  border: none;
+}
+
+.entity__name {
+  font-weight: bold;
+}
