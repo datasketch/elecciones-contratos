@@ -68,20 +68,42 @@
         </a>
       </div>
     </div>
+    <div class="search">
+      <h1 class="title line centered">
+        <img src="~/assets/images/search.png" alt="Lupa" width="50">
+        Busca por nombre o cédula
+      </h1>
+      <input type="text" @keyup="filter" class="search__input" v-model="search" placeholder="Escribe nombre o cédula del candidato">
+    </div>
+    <transition name="results">
+      <div class="results" v-if="list.length">
+        <result-card v-for="(person, index) in list" :key="index" :person="person"></result-card>
+      </div>
+    </transition>
   </main>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+import ResultCard from '~/components/ResultCard'
+import debounce from 'lodash.debounce'
+
 export default {
   head () {
     return {
       title: 'Elecciones y contratos'
     }
   },
+  components: { ResultCard },
   data () {
     return {
-      findings: []
+      findings: [],
+      search: '',
+      list: []
     }
+  },
+  computed: {
+    ...mapState(['people'])
   },
   mounted () {
     this.findings = Array.from(document.querySelectorAll('.finding'))
@@ -93,6 +115,21 @@ export default {
       this.findings.map(p => p.classList.add('no-visible'))
       finding.classList.remove('no-visible')
     },
+    filter () {
+      if (!this.search.length) {
+        this.list = []
+        return
+      }
+      debounce(this.lookup, 500)()
+    },
+    lookup () {
+      const search = this.search.toLowerCase()
+      this.list = this.people.filter(person => {
+        const name = person.nombre ? person.nombre.toLowerCase() : '@'
+        const id = person.iden ? person.iden : '@'
+        return name.includes(search) || id.toString().includes(search)
+      })
+    }
   }
 }
 </script>
@@ -265,6 +302,40 @@ export default {
 
 .financer {
   border-color: #E35A2A !important;
+}
+
+.search {
+  background: #E7EEF8;
+  padding: 40px 0;
+}
+
+.search__input {
+  border-radius: 5px;
+  border: none;
+  display: block;
+  font-family: 'Maven Pro Regular', sans-serif;
+  font-size: 18px;
+  margin: 20px auto;
+  padding: 10px;
+  width: 80%;
+}
+
+.results {
+  margin: 20px 0;
+  max-height: 700px;
+  overflow: auto;
+}
+
+.results-enter-active, .results-leave-active {
+  transition: opacity 0.25s ease-out;
+}
+
+.results-enter, .results-leave-to {
+  opacity: 0;
+}
+
+.results-leave, .results-enter-to {
+  opacity: 1;
 }
 
 @media screen and (min-width: 768px) {

@@ -6,18 +6,18 @@
     <nuxt-link class="nav__link" to="/explora">Explora</nuxt-link>
     <nuxt-link class="nav__link" to="/datos">Datos</nuxt-link>
     <nuxt-link class="nav__link" to="/nosotros">Nosotros</nuxt-link>
-    <!-- <div class="nav__actions line v-centered">
-      <a href="http://facebook.com/transparenciaporcolombia" target="_blank" class="facebook"><font-awesome-icon :icon="['fab', 'facebook-f']"></font-awesome-icon></a>
-      <a href="https://twitter.com/transparenciaco" target="_blank" class="twitter"><font-awesome-icon :icon="['fab', 'twitter']"></font-awesome-icon></a>
+    <div class="nav__actions line v-centered">
+      <a href="https://twitter.com/transparenciaco" target="_blank" class="twitter icon"><font-awesome-icon :icon="['fab', 'twitter']"></font-awesome-icon></a>
+      <a href="http://facebook.com/transparenciaporcolombia" target="_blank" class="facebook icon"><font-awesome-icon :icon="['fab', 'facebook-f']"></font-awesome-icon></a>
       <img src="~/assets/images/accion.png" alt="Acción ciudadana">
-    </div> -->
+    </div>
   </nav>
 </template>
 
 <script>
 export default {
   name: 'Nav'
-}                                                                                                                                                                               
+}
 </script>
 
 <style scoped>
@@ -39,12 +39,24 @@ export default {
   border-bottom: 5px solid #B1C2DE;
 }
 
+.nav__actions {
+  position: fixed;
+  top: 0;
+  right: 10%;
+  z-index: 2;
+}
+
 .facebook {
   color: #3b5998;
 }
 
 .twitter {
-  color: #1da1f2;       
+  color: #1da1f2;
+}
+
+.icon {
+  font-size: 18px;
+  margin-right: 5px;
 }
 
 img {

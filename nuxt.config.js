@@ -34,14 +34,15 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+    },
+    vendors: ['vuex']
   },
   plugins: [
-    { src: '~/plugins/font-awesome', ssr: false },
-    { src: '~/plugins/tabs', ssr: false }
+    '~/plugins/font-awesome',
+    '~/plugins/tabs'
   ],
   router: {
-    base: './'
+    base: process.env.NODE_ENV === 'production' ? './' : '/'
   }
 }
 
