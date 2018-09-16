@@ -55,11 +55,19 @@ body {
   padding-right: 5% !important;
 }
 
-.title {
+.title,
+.subtitle {
   color: #110066;
   font-family: 'Nixie One Regular', cursive;
   text-transform: uppercase;
+}
+
+.title {
   font-size: 25px;
+}
+
+.subtitle {
+  font-size: 20px;
 }
 
 .text-center {
@@ -109,5 +117,8 @@ body {
 @media screen and (min-width: 768px) {
   .title {
     font-size: 32px;
+  }
+  .subtitle {
+    font-size: 28px;
   }
 }

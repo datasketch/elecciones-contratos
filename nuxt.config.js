@@ -22,6 +22,9 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    vendor: [
+      '~/plugins/font-awesome'
+    ],
     /*
     ** Run ESLint on save
     */

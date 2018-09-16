@@ -11,41 +11,38 @@
         </div>
       </div>
       <div class="banner__content">
-        <p>Es una solución tecnológica que permite conocer datos acerca de quienes fueron candidatos al Congreso en 2018 y de los aportantes a sus campañas. Este prototipo busca aportar al control social facilitando la realización de cruces de información, entre datos oficiales de financiación de campañas electorales suministrados por Cuentas Claras, y datos de contratación pública oficiales suministrados por SECOP.</p>
+        <p>Elecciones y contratos es una solución tecnológica que permite conocer datos acerca de los candidatos a cargos de elección popular y sus financiadores. Aportal al control social facilitando y analizando la información entre datos oficiales de financiación de campañas electorales y datos de contratación pública</p>
       </div>
     </div>
     <div class="findings container">
-      <h1 class="title">Hallazgos</h1>
+      <h2 class="subtitle">Datos destacados</h2>
       <div class="findings__content">
         <div class="findings__description">
-          <p ref="aportes" class="finding">En las elecciones de Autoridades Locales de 2015 se realizaron donaciones por un total de $67,111,777,097 y en las de Congreso en 2018 de $54,729,419,333. Los candidatos que en estas elecciones obtuvieron una mayor cantidad de donaciones en su campaña fueron Enrique Peñalosa, elegido alcalde de Bogotá en 2015, en segundo lugar el electo Senador Álvaro Uribe en 2018, y el tercer lugar el electo alcalde de Cali en 2015 Maurice Armitage.</p>
-          <p ref="gastos" class="finding no-visible">Los candidatos al Congreso 2018 gastaron en total $258,580,370,533 de los cuales el 51.4% fue gasto de candidatos a Cámara de Representantes y 48.6% corresponde a candidatos al Senado de la República. Los 3 candidatos que más invirtieron en su campaña fueron Armando Benedetti, Álvaro Uribe y Jorge Enrique Robledo.</p>
-          <p ref="creditos" class="finding no-visible">Para las elecciones de Autoridades Locales en 2015, 1,155 candidatos accedieron a créditos, dando un total de $30,325,427,857 en dineros pedidos para estas campañas, la mayoría de créditos fueron pedidos por quienes se lanzaron al concejo. Por otro lado en las elecciones de Congreso en 2018, 512 candidatos accedieron a créditos, con un total de $35,140,923,052 para las campañas, la mayoría de créditos los hicieron quienes aspiraban a llegar a la cámara.</p>
-          <p ref="contratos" class="finding no-visible">De los 73,127 candidatos de las elecciones de Autoridades Locales en 2015, once mil quinientos quince (15.7%) tienen contratos registrados con el Estado. En cuanto a los candidatos a las elecciones de Congreso 2018, de los 2,366, apróximadamente cuatrocientos ochenta y dos (20.4%) han tenido o tienen contratos con el Estado. Ambos datos según el histórico 2010-2018 de SECOP.</p>
+          <p
+            v-for="(destacado, index) in destacados"
+            :key="index"
+            :class="['finding', { 'no-visible': index !== 0 }]"
+            :ref="destacado.title">
+            {{ destacado.text }}
+          </p>
         </div>
         <div class="findings__tabs">
           <tabs :options="{ useUrlFragment: false }" @changed="tabChanged">
-            <tab id="aportes" name="Aportes" suffix="<span class='suffix'>Hallazgo 1</span>">1</tab>
-            <tab id="gastos" name="Gastos" suffix="<span class='suffix'>Hallazgo 2</span>">2</tab>
-            <tab id="creditos" name="Créditos" suffix="<span class='suffix'>Hallazgo 3</span>">3</tab>
-            <tab id="contratos" name="Contratos" suffix="<span class='suffix'>Hallazgo 4</span>">4</tab>
+            <tab
+              v-for="(destacado, index) in destacados"
+              :key="index"
+              :name="destacado.title"
+              :id="destacado.title">
+              <iframe :src="destacado.chart" frameborder="0"></iframe>
+            </tab>
           </tabs>
         </div>
       </div>
     </div>
     <div class="recommended container__inner">
       <div class="recommended__title">
-        <h1 class="title">Recomendados</h1>
-        <div class="legends">
-          <div class="legend line v-centered">
-            <div class="bullet bullet-blue"></div>
-            <span>Candidato</span>
-          </div>
-          <div class="legend line v-centered">
-            <div class="bullet bullet-orange"></div>
-            <span>Financiador</span>
-          </div>
-        </div>
+        <h1 class="subtitle">Recomendados</h1>
+        <p>Haz click en los personajes para descubrir sus financiadores y los contratos que estos tienen</p>
       </div>
       <div class="recommended__photos">
         <a href="#" class="candidate">
@@ -69,15 +66,16 @@
       </div>
     </div>
     <div class="search container__inner">
-      <h1 class="title line centered nowrap">
+      <h1 class="subtitle line centered nowrap">
         <img src="~/assets/images/search.png" alt="Lupa" width="50">
         <span>Busca por nombre o cédula</span>
       </h1>
       <input type="text" @keyup="filter" class="search__input" v-model="search" placeholder="Escribe nombre o cédula del candidato">
     </div>
+    <Loader v-if="loading" :size="40" :borderWidth="4" message="Cargando"/>
     <transition name="results">
-      <div class="results">
-        <result-card v-if="list.length" v-for="(person, index) in list" :key="index" :person="person"></result-card>
+      <div class="results" v-if="list.length">
+        <result-card  v-for="(person, index) in list" :key="index" :person="person"></result-card>
       </div>
     </transition>
   </main>
@@ -86,7 +84,10 @@
 <script>
 import { mapState } from 'vuex'
 import ResultCard from '~/components/ResultCard'
+import Loader from '~/components/Loader'
 import debounce from 'lodash.debounce'
+import destacados from '~/static/destacados.json'
+import recomendados from '~/static/recomendados.json'
 
 export default {
   head () {
@@ -94,12 +95,15 @@ export default {
       title: 'Elecciones y contratos'
     }
   },
-  components: { ResultCard },
+  components: { ResultCard, Loader },
   data () {
     return {
       findings: [],
       search: '',
-      list: []
+      list: [],
+      destacados,
+      recomendados,
+      loading: false
     }
   },
   computed: {
@@ -111,25 +115,27 @@ export default {
   methods: {
     tabChanged (selected) {
       const id = selected.tab.id
-      const finding = this.$refs[id]
+      const finding = this.$refs[id][0]
       this.findings.map(p => p.classList.add('no-visible'))
       finding.classList.remove('no-visible')
     },
     filter () {
-      if (!this.search.length) {
-        this.list = []
-        return
-      }
-
+      this.loading = true
       debounce(this.lookup, 500)()
     },
     lookup () {
+      if (!this.search.length) {
+        this.list = []
+        this.loading = false
+        return
+      }
       const search = this.search.toLowerCase()
       this.list = this.people.filter(person => {
         const name = person.nombre ? person.nombre.toLowerCase() : '@'
         const id = person.iden ? person.iden : '@'
         return name.includes(search) || id.toString().includes(search)
       })
+      this.loading = false
     }
   }
 }
@@ -182,11 +188,17 @@ export default {
 }
 
 .findings__description {
+  align-self: center;
   grid-area: description;
 }
 
 .findings__tabs {
   grid-area: tabs;
+}
+
+.findings__tabs iframe {
+  width: 100%;
+  min-height: 400px;
 }
 
 .finding {
@@ -243,25 +255,6 @@ export default {
   padding: 20px 0;
 }
 
-.legend {
-  margin: 0 0 5px;
-}
-
-.bullet {
-  border-radius: 50%;
-  height: 15px;
-  margin-right: 5px;
-  width: 15px;
-}
-
-.bullet-blue {
-  background: #97E3FD;
-}
-
-.bullet-orange {
-  background: #E35A2A;
-}
-
 .recommended {
   background: #F6F9FE;
   display: grid;
@@ -278,6 +271,10 @@ export default {
 
 .recommended__title h1 {
   margin: 0 0 20px;
+}
+
+.recommended__title p {
+  color: #501981;
 }
 
 .recommended__photos {
@@ -323,9 +320,23 @@ export default {
 }
 
 .results {
-  margin: 20px 0;
+  margin: 20px 10px 20px 0;
   max-height: 700px;
   overflow: auto;
+}
+
+.results::-webkit-scrollbar {
+  background-color: transparent;
+  width: 5px;
+}
+
+.results::-webkit-scrollbar-thumb {
+  background-color: #B1C2DE;
+  border: 2px solid #B1C2DE;
+}
+
+.results::-webkit-scrollbar-track {
+  background-color: #ffffff;
 }
 
 .results-enter-active, .results-leave-active {
@@ -338,6 +349,10 @@ export default {
 
 .results-leave, .results-enter-to {
   opacity: 1;
+}
+
+.loader {
+  margin: 20px 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -374,7 +389,7 @@ export default {
   .recommended {
     display: grid;
     grid-template-areas: 'legend photos';
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: none;
   }
   .recommended__title {

@@ -9,7 +9,8 @@
           <img src="~/assets/images/centro_de_innnovacion.png" alt="Centro de Innovación">
         </div>
       </div>
-      <p>Acciónate fue desarrollada a partir de un proceso de construcción colectiva innovador desarrollado por Transparencia por Colombia, la Corporación Somos Más, Datasketch, y el Centro de Innovación Pública Digital de MinTIC.</p>
+      <p>Elecciones y contratos fue desarrollada a partir de un proceso de construcción colectiva innovador desarrollador por Transparencia por Colombia, la Corporación Somos Más, Datasketch y el Centro de Innovación Pública Digital de MinTIC</p>
+      <p>Esta plataforma fue construida con datos de financiación de campañas electorales de Cuentas Claras y datos de contratación pública de SECOP</p>
     </div>
   </footer>
 </template>
@@ -24,16 +25,19 @@ export default {
 footer {
   background: #E7EEF8;
   padding: 10px;
+  font-size: small;
 }
 
 footer p {
-  margin: 15px 0 0;
+  color: #110066;
+  margin: 0 0 5px;
 }
 
 .logos {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
+  margin: 0 0 15px;
 }
 
 .media {
