@@ -41,8 +41,7 @@ module.exports = {
   },
   plugins: [
     '~/plugins/font-awesome',
-    '~/plugins/tabs',
-    '~/plugins/vue-swal'
+    '~/plugins/tabs'
   ],
   router: {
     base: process.env.NODE_ENV === 'production' ? './' : '/'

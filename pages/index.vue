@@ -1,5 +1,17 @@
 <template>
   <main class="item-fill">
+    <transition name="modal">
+      <Modal v-if="modal.show" @close="modal.show = false">
+        <template slot="header">
+          <h2>{{ modal.info.nombre | name }}</h2>
+        </template>
+        <div slot="body" class="column">
+          <iframe :src="modal.info.network" frameborder="0" width="100%" style="min-height: 500px"></iframe>
+          <p style="margin: 0 0 10px">{{ modal.info.text }}</p>
+          <a class="button item-end">Ver más</a>
+        </div>
+      </Modal>
+    </transition>
     <div class="banner container">
       <div class="banner__title">
         <h1 class="title">Elecciones y contratos</h1>
@@ -45,23 +57,13 @@
         <p>Haz click en los personajes para descubrir sus financiadores y los contratos que estos tienen</p>
       </div>
       <div class="recommended__photos">
-        <a href="#" class="candidate">
+        <a
+          class="column recommended__item"
+          v-for="(recomendado, index) in recomendados"
+          @click.prevent="showModal(recomendado)"
+          :key="index">
           <img class="recommended__photo" src="https://static.licdn.com/scds/common/u/images/themes/katy/ghosts/person/ghost_person_200x200_v1.png">
-        </a>
-        <a href="#" class="candidate">
-          <img class="recommended__photo" src="https://static.licdn.com/scds/common/u/images/themes/katy/ghosts/person/ghost_person_200x200_v1.png">
-        </a>
-        <a href="#" class="candidate">
-          <img class="recommended__photo" src="https://static.licdn.com/scds/common/u/images/themes/katy/ghosts/person/ghost_person_200x200_v1.png">
-        </a>
-        <a href="#" class="financer">
-          <img class="recommended__photo" src="https://static.licdn.com/scds/common/u/images/themes/katy/ghosts/person/ghost_person_200x200_v1.png">
-        </a>
-        <a href="#" class="financer">
-          <img class="recommended__photo" src="https://static.licdn.com/scds/common/u/images/themes/katy/ghosts/person/ghost_person_200x200_v1.png">
-        </a>
-        <a href="#" class="financer">
-          <img class="recommended__photo" src="https://static.licdn.com/scds/common/u/images/themes/katy/ghosts/person/ghost_person_200x200_v1.png">
+          <p class="recommended__name"><small>{{recomendado.nombre | name}}</small></p>
         </a>
       </div>
     </div>
@@ -85,6 +87,7 @@
 import { mapState } from 'vuex'
 import ResultCard from '~/components/ResultCard'
 import Loader from '~/components/Loader'
+import Modal from '~/components/Modal'
 import debounce from 'lodash.debounce'
 import destacados from '~/static/destacados.json'
 import recomendados from '~/static/recomendados.json'
@@ -95,7 +98,7 @@ export default {
       title: 'Elecciones y contratos'
     }
   },
-  components: { ResultCard, Loader },
+  components: { ResultCard, Loader, Modal },
   data () {
     return {
       findings: [],
@@ -103,7 +106,11 @@ export default {
       list: [],
       destacados,
       recomendados,
-      loading: false
+      loading: false,
+      modal: {
+        show: false,
+        info: undefined
+      }
     }
   },
   computed: {
@@ -136,12 +143,33 @@ export default {
         return name.includes(search) || id.toString().includes(search)
       })
       this.loading = false
+    },
+    showModal (recomendado) {
+      this.modal.info = recomendado
+      this.modal.show = true
+    }
+  },
+  filters: {
+    name (str) {
+      if (!str) {
+        return
+      }
+      const name = str.split(/\s/).map(s => s.charAt(0).toUpperCase() + s.substr(1).toLowerCase())
+      return name.join(' ')
     }
   }
 }
 </script>
 
 <style>
+.button {
+  background: #501981;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+
 .banner {
   align-items: center;
   background-image: url(~/assets/images/banner.png);
@@ -289,19 +317,15 @@ export default {
 .recommended__photo {
   border-radius: 50%;
   max-width: 60px;
+  display: flex;
+  margin: 0 auto;
 }
 
-.recommended__photos a {
-  border-radius: 50%;
-  border: 5px solid transparent;
-}
-
-.candidate {
-  border-color: #97E3FD !important;
-}
-
-.financer {
-  border-color: #E35A2A !important;
+.recommended__item {
+  color: #501981;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
 }
 
 .search {
@@ -356,6 +380,19 @@ export default {
   margin: 20px 0;
 }
 
+.modal-enter, .modal-leave-to {
+  opacity: 0;
+  /* transform: scale(0); */
+}
+
+.modal-leave, .modal-enter-to {
+  opacity: 1;
+  /* transform: scale(1); */
+}
+
+.modal-enter-active, .modal-leave-active {
+  transition: all 0.3s ease-in-out;
+}
 @media screen and (min-width: 768px) {
   .banner {
     grid-template-columns: 0.7fr 1fr;

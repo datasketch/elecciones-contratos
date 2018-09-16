@@ -21,7 +21,6 @@
     "iframe-resizer": "^3.6.1",
     "lodash.debounce": "^4.0.8",
     "nuxt": "^1.0.0",
-    "vue-swal": "^0.1.0",
     "vue-tabs-component": "^1.4.0"
   },
   "devDependencies": {

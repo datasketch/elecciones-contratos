@@ -5,7 +5,6 @@
     </div>
     <nuxt-link class="nav__link" to="/">Inicio</nuxt-link>
     <nuxt-link class="nav__link" to="/candidatos">Candidatos</nuxt-link>
-    <!-- <nuxt-link class="nav__link" to="/financiadores">Financiadores</nuxt-link> -->
     <nuxt-link class="nav__link" to="/explora">Explora</nuxt-link>
     <nuxt-link class="nav__link" to="/datos">Datos</nuxt-link>
     <nuxt-link class="nav__link" to="/nosotros">Nosotros</nuxt-link>
