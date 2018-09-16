@@ -222,6 +222,7 @@ export default {
   justify-content: space-between;
   list-style-type: none;
   padding: 0;
+  background: #F6F9FE;
 }
 
 .tabs-component-tab {

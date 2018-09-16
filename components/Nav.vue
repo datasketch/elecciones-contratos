@@ -45,15 +45,16 @@ export default {
 }
 
 .nav__link {
+  border-bottom: 5px solid transparent;
   color: #501981;
+  display: none;
   font-family: 'Maven Pro Bold', sans-serif;
   padding: 15px;
   text-decoration: none;
-  display: none;
 }
 
 .nav__link.nuxt-link-exact-active.nuxt-link-active {
-  border-bottom: 5px solid #B1C2DE;
+  border-bottom-color:#B1C2DE;
 }
 
 .nav__spacer {

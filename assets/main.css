@@ -50,6 +50,10 @@ body {
   margin: 0 auto;
 }
 
+.container_sm {
+  width: 90%;
+}
+
 .container__inner {
   padding-left: 5% !important;
   padding-right: 5% !important;
@@ -114,7 +118,14 @@ body {
   font-weight: bold;
 }
 
+.brief {
+  padding: 20px 0;
+}
+
 @media screen and (min-width: 768px) {
+  .container_sm {
+    width: 70%;
+  }
   .title {
     font-size: 32px;
   }
