@@ -43,8 +43,8 @@ module.exports = {
     '~/plugins/font-awesome',
     '~/plugins/tabs'
   ],
-  router: {
-    base: process.env.NODE_ENV === 'production' ? './' : '/'
-  }
+  // router: {
+  //   base: process.env.NODE_ENV === 'production' ? './' : '/'
+  // }
 }
 

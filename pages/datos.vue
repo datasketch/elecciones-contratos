@@ -5,3 +5,14 @@
     </div>
   </main>
 </template>
+
+<script>
+export default {
+  name: 'Datos',
+  head () {
+    return {
+      title: 'Datos | Elecciones y contratos'
+    }
+  }
+}
+</script>

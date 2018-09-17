@@ -26,7 +26,12 @@
 
 <script>
 export default {
-  name: 'Nosotros'
+  name: 'Nosotros',
+  head () {
+    return {
+      title: 'Nosotros | Elecciones y contratos'
+    }
+  }
 }
 </script>
 

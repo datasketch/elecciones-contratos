@@ -15,6 +15,11 @@ export default {
   mounted () {
     const iframe = document.querySelector('iframe')
     iframeResizer({ checkOrigin: false }, iframe)
+  },
+  head () {
+    return {
+      title: 'Candidatos | Elecciones y contratos'
+    }
   }
 }
 </script>
