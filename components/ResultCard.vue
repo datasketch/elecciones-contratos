@@ -6,7 +6,7 @@
     </p>
     <p class="line justify-between v-centered">
       <span class="charge">Aspiró a: {{ person.cargo }}</span>
-      <a href="" class="column centered">Ver más</a>
+      <a :href="'/candidatos?node_id=' + person.iden" class="column centered">Ver más</a>
     </p>
   </div>
 </template>
