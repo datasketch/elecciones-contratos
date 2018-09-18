@@ -6,7 +6,7 @@
     </p>
     <p class="line justify-between v-centered">
       <span class="charge">Aspiró a: {{ person.cargo }}</span>
-      <a :href="'/candidatos?node_id=' + person.iden" class="column centered">Ver más</a>
+      <nuxt-link class="column centered" :to="'/candidatos?node_id=' + person.iden">Ver más</nuxt-link>
     </p>
   </div>
 </template>
