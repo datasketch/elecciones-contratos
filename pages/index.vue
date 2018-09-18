@@ -6,9 +6,9 @@
           <h2>{{ modal.info.nombre | name }}</h2>
         </template>
         <div slot="body" class="column">
-          <iframe :src="modal.info.network" frameborder="0" width="100%" style="min-height: 500px"></iframe>
           <p style="margin: 0 0 10px">{{ modal.info.text }}</p>
-          <a class="button item-end">Ver más</a>
+          <a class="button item-end" :href="'/candidatos?node_id=' + modal.info.iden">Ver más</a>
+          <iframe :src="modal.info.network" frameborder="0" width="100%" style="min-height: 500px"></iframe>
         </div>
       </Modal>
     </transition>
@@ -187,6 +187,10 @@ export default {
 
 .banner__title {
   grid-area: title;
+}
+
+.banner__title .title {
+  color: #E35A2A;
 }
 
 .banner__content {
