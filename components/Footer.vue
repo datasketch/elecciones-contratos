@@ -3,10 +3,28 @@
     <div class="container">
       <div class="logos">
         <div class="media">
-          <img src="~/assets/images/gobierno_mintic.png" alt="Gobierno, MinTic">
+          <img src="~/assets/images/sm.png" alt="Gobierno, MinTic">
         </div>
         <div class="media">
-          <img src="~/assets/images/centro_de_innnovacion.png" alt="Centro de Innovación">
+          <img src="~/assets/images/dt.png" alt="Gobierno, MinTic">
+        </div>
+        <div class="media">
+          <img src="~/assets/images/txc.png" alt="Centro de Innovación">
+        </div>
+        <div class="media">
+          <img src="~/assets/images/cipd.png" alt="Centro de Innovación">
+        </div>
+        <div class="media">
+          <img src="~/assets/images/gc.png" alt="Centro de Innovación">
+        </div>
+        <div class="media">
+          <img src="~/assets/images/mintic.png" alt="Centro de Innovación">
+        </div>
+        <div class="media">
+          <img src="~/assets/images/pnud.png" alt="Centro de Innovación">
+        </div>
+        <div class="media">
+          <img src="~/assets/images/ud.png" alt="Centro de Innovación">
         </div>
       </div>
       <p>Elecciones y contratos fue desarrollada a partir de un proceso de construcción colectiva innovador desarrollador por Transparencia por Colombia, la Corporación Somos Más, Datasketch y el Centro de Innovación Pública Digital de MinTIC</p>
@@ -38,22 +56,16 @@ footer p {
   display: flex;
   flex-wrap: wrap;
   margin: 0 0 15px;
+  justify-content: space-between;
 }
 
 .media {
   margin: 5px;
   min-width: 0;
+  max-width: 100px;
 }
 
 .media img {
   max-width: 100%;
-}
-
-.media:nth-of-type(1) img {
-  width: 300px;
-}
-
-.media:nth-of-type(2) img {
-  width: 100px;
 }
 </style>
