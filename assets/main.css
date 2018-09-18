@@ -102,6 +102,15 @@ body {
   padding: 20px 0;
 }
 
+.button {
+  background: #501981;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+  text-decoration: none;
+}
+
 @media screen and (min-width: 768px) {
   .container_sm {
     width: 70%;

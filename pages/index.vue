@@ -162,14 +162,6 @@ export default {
 </script>
 
 <style>
-.button {
-  background: #501981;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  padding: 5px 15px;
-}
-
 .banner {
   align-items: center;
   background-image: url(~/assets/images/banner.png);
