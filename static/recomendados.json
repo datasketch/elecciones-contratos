@@ -75,7 +75,7 @@
 		"n_contratos_secop": 5,
 		"contratos_secop": "no",
 		"text": "Las conexiones son financiadores. El tamaño de las conexiones corresponde al número de contratos que han tenido con el estado. Se puede diferencias si son personas naturales o jurídicas de acuerdo a su color. Los puntos blancos, son financiadores que no tienen contratos reportados en SECOP.",
-		"network": "/viz/network/alvaro-uribe-velez"
+		"network": "/viz/network/alvaro-uribe-velez.html"
 	},
 	{
 		"iden": 72148060,
