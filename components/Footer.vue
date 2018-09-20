@@ -68,4 +68,9 @@ footer p {
 .media img {
   max-width: 100%;
 }
+
+.media:nth-last-child(1),
+.media:nth-last-child(2) {
+  max-width: 70px;
+}
 </style>

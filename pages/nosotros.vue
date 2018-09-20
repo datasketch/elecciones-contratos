@@ -4,7 +4,7 @@
     <div class="organization">
       <h2 class="organization__name">Centro de Innovación Pública Digital de MinTIC</h2>
       <p class="organization__role">Facilitador del proceso</p>
-      <p>El Centro de Innovación es un proyecto desarrollado bajo el liderazgo de la Dirección de Gobierno en Línea del Ministerio TIC, que tiene como objetivo fortalecer la capacidad de innovación en las entidades públicas mediante el uso de las tecnologías de la información y la comunicación.</p>
+      <p>El Centro de Innovación Pública Digital es una iniciativa del Ministerio TIC y el PNUD, que desde la Dirección de Gobierno Digital, trabaja con métodos de innovación para estimular el uso de tecnologías emergentes en la consecución de los Objetivos de Desarrollo Sostenible y dinamizar el ecosistema de Innovación Pública.</p>
     </div>
     <div class="organization">
       <h2 class="organization__name">Corporación Somos Más</h2>
