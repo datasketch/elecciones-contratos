@@ -23,9 +23,24 @@
         </div>
       </div>
       <div class="banner__content">
-        <p>Elecciones y contratos es una solución tecnológica que permite conocer datos acerca de los candidatos a cargos de elección popular y sus financiadores. Aportal al control social facilitando y analizando la información entre datos oficiales de financiación de campañas electorales y datos de contratación pública</p>
+        <p>Elecciones y contratos es una solución tecnológica que permite conocer datos acerca de los candidatos a cargos de elección popular y sus financiadores. Aporta al control social facilitando y analizando la información entre datos oficiales de financiación de campañas electorales y datos de contratación pública</p>
       </div>
     </div>
+    <!-- Search -->
+    <div class="search container__inner">
+      <h1 class="subtitle line centered nowrap">
+        <img src="~/assets/images/search.png" alt="Lupa" width="50">
+        <span>Busca por nombre o cédula</span>
+      </h1>
+      <input type="text" @keyup="filter" class="search__input" v-model="search" placeholder="Escribe nombre o cédula del candidato">
+    </div>
+    <Loader v-if="loading" :size="40" :borderWidth="4" message="Cargando"/>
+    <transition name="results">
+      <div class="results" v-if="list.length">
+        <result-card  v-for="(person, index) in list" :key="index" :person="person"></result-card>
+      </div>
+    </transition>
+    <!-- Search -->
     <div class="findings container">
       <h2 class="subtitle">Datos destacados</h2>
       <div class="findings__content">
@@ -67,19 +82,6 @@
         </a>
       </div>
     </div>
-    <div class="search container__inner">
-      <h1 class="subtitle line centered nowrap">
-        <img src="~/assets/images/search.png" alt="Lupa" width="50">
-        <span>Busca por nombre o cédula</span>
-      </h1>
-      <input type="text" @keyup="filter" class="search__input" v-model="search" placeholder="Escribe nombre o cédula del candidato">
-    </div>
-    <Loader v-if="loading" :size="40" :borderWidth="4" message="Cargando"/>
-    <transition name="results">
-      <div class="results" v-if="list.length">
-        <result-card  v-for="(person, index) in list" :key="index" :person="person"></result-card>
-      </div>
-    </transition>
   </main>
 </template>
 
@@ -188,6 +190,7 @@ export default {
 .banner__content {
   color: #501981;
   grid-area: content;
+  font-size: 18px;
 }
 
 .banner__icons {
