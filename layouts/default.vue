@@ -1,6 +1,7 @@
 <template>
   <div id="wrapper" class="column">
     <Nav />
+    <Sidebar />
     <nuxt/>
     <Footer />
   </div>
@@ -9,9 +10,10 @@
 <script>
 import Footer from '~/components/Footer'
 import Nav from '~/components/Nav'
+import Sidebar from '~/components/Sidebar'
 
 export default {
-  components: { Footer, Nav }
+  components: { Footer, Nav, Sidebar }
 }
 </script>
 

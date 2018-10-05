@@ -16,7 +16,7 @@ export default {
 <style>
 .burger {
   cursor: pointer;
-  margin: 8px 0;
+  margin: 6px 0;
   position: relative;
   user-select: none;
   display: block;
@@ -25,13 +25,13 @@ export default {
 .burger,
 .burger:before,
 .burger:after {
-  background-color: #000000;
+  background-color: #6f6f6f;
   display: block;
-  height: 5px;
+  height: 2px;
   outline: 1px solid transparent;
   transition-duration: 0.3s;
   transition-property: background-color, transform;
-  width: 30px;
+  width: 20px;
 }
 
 .burger:before,
@@ -41,11 +41,11 @@ export default {
 }
 
 .burger:before {
-  top: -8px;
+  top: -5px;
 }
 
 .burger:after {
-  top: 8px;
+  top: 5px;
 }
 
 .burger.active {
@@ -53,10 +53,10 @@ export default {
 }
 
 .burger.active:before {
-  transform: translateY(8px) rotate(45deg);
+  transform: translateY(5px) rotate(45deg);
 }
 
 .burger.active:after {
-  transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-5px) rotate(-45deg);
 }
 </style>

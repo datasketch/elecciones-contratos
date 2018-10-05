@@ -1,7 +1,7 @@
 [
 	{
 		"iden": 19333686,
-		"nombre": "ENRIQUE PEÑALOSA LONDOÑO",
+		"nombre": "ENRIQUE PEÑALOSA",
 		"cargo": "Alcaldía",
 		"departamento": "BOGOTA D.C.",
 		"partido": "RECUPEREMOS BOGOTA",
@@ -17,7 +17,7 @@
 	},
 	{
 		"iden": 19164378,
-		"nombre": "AURELIJUS RUTENIS ANTANAS MOCKUS SIVICKAS",
+		"nombre": "ANTANAS MOCKUS",
 		"cargo": "Senado de la República",
 		"departamento": "NULL",
 		"partido": "PARTIDO ALIANZA VERDE",
@@ -33,7 +33,7 @@
 	},
 	{
 		"iden": 8532318,
-		"nombre": "ARTURO CHAR CHALJUB",
+		"nombre": "ARTURO CHAR",
 		"cargo": "Senado de la República",
 		"departamento": "NULL",
 		"partido": "PARTIDO CAMBIO RADICAL",
@@ -49,7 +49,7 @@
 	},
 	{
 		"iden": 72148060,
-		"nombre": "ARMANDO ALBERTO BENEDETTI VILLANEDA",
+		"nombre": "ARMANDO BENEDETTI",
 		"departamento": "BOGOTA D.C.",
 		"campana": "Congreso 2018",
 		"iden_type": "Cédula de Ciudadanía",
@@ -63,7 +63,7 @@
 	},
 	{
 		"iden": 70041053,
-		"nombre": "ALVARO URIBE VELEZ",
+		"nombre": "ALVARO URIBE",
 		"cargo": "Senado de la República",
 		"departamento": "NULL",
 		"partido": "PARTIDO CENTRO DEMOCRATICO",
@@ -79,7 +79,7 @@
 	},
 	{
 		"iden": 72148060,
-		"nombre": "CESAR OMAR ROJAS AYALA",
+		"nombre": "CESAR ROJAS",
 		"text": "Las conexiones son financiadores. El tamaño de las conexiones corresponde al número de contratos que han tenido con el estado. Se puede diferencias si son personas naturales o jurídicas de acuerdo a su color. Los puntos blancos, son financiadores que no tienen contratos reportados en SECOP.",
 		"network": "/viz/network/cesar-omar-rojas-ayala.html"
 	}
