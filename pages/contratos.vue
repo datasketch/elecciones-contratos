@@ -15,7 +15,7 @@ export default {
   },
   head () {
     return {
-      title: 'Explora | Elecciones y contratos'
+      title: 'Contratos | Elecciones y contratos'
     }
   }
 }

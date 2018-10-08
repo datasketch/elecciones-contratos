@@ -21,13 +21,11 @@ export default {
     }
   },
   created () {
-    console.log('HOLA')
     const query = this.$route.query
     this.query = query.node_id
     if (this.query) {
       this.url = this.url + `?node_id=${this.query}`
     }
-    console.log('URL: ' + this.url)
   },
   mounted () {
     const iframe = document.querySelector('iframe')
@@ -35,7 +33,7 @@ export default {
   },
   head () {
     return {
-      title: 'Candidatos | Elecciones y contratos'
+      title: 'Elecciones | Elecciones y contratos'
     }
   }
 }

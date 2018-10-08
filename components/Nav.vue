@@ -2,13 +2,13 @@
   <nav class="nav line v-centered justify-between">
     <div class="bar_mobile">
       <div class="burger__container">
-        <Burger :onclick="openMenu"/>
+        <Burger :onclick="handleMenu"/>
       </div>
     </div>
     <div class="bar line v-centered">
       <nuxt-link class="nav__link" to="/">Inicio</nuxt-link>
-      <nuxt-link class="nav__link" to="/candidatos">Candidatos</nuxt-link>
-      <nuxt-link class="nav__link" to="/explora">Explora</nuxt-link>
+      <nuxt-link class="nav__link" to="/elecciones">Elecciones</nuxt-link>
+      <nuxt-link class="nav__link" to="/contratos">Contratos</nuxt-link>
       <nuxt-link class="nav__link" to="/datos">Datos</nuxt-link>
       <nuxt-link class="nav__link" to="/nosotros">Nosotros</nuxt-link>
     </div>
@@ -25,10 +25,21 @@ import Burger from '~/components/Burger'
 export default {
   name: 'Nav',
   components: { Burger },
+  data () {
+    return {
+      sidebar: null,
+      switched: false
+    }
+  },
+  mounted () {
+    this.sidebar = document.querySelector('.sidebar')
+  },
   methods: {
-    openMenu (event) {
+    handleMenu (event) {
       event.target.classList.toggle('active')
-    },
+      this.sidebar.classList.toggle('open')
+      document.body.classList.toggle('pushed')
+    }
   }
 }
 </script>
@@ -43,7 +54,7 @@ export default {
   padding: 0 5%;
   position: sticky;
   top: 0px;
-  z-index: 1;
+  z-index: 15;
 }
 
 .bar {
