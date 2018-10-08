@@ -28,7 +28,6 @@
         </div>
       </div>
       <p>Elecciones y contratos fue desarrollada a partir de un proceso de construcción colectiva innovador desarrollador por Transparencia por Colombia, la Corporación Somos Más, Datasketch y el Centro de Innovación Pública Digital de MinTIC</p>
-      <p>Esta plataforma fue construida con datos de financiación de campañas electorales de Cuentas Claras y datos de contratación pública de SECOP</p>
     </div>
   </footer>
 </template>
