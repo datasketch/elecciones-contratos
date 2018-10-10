@@ -50,15 +50,14 @@
             :key="index"
             :name="item.title"
           >
+          <div class="findings__container">
             <template v-for="(chart, index) in item.charts">
-              <div :key="index" class="findings__content">
-                <h3>{{ chart.title }}</h3>
-                <div class="findings__description">
-                  <p>{{ chart.text }}</p>
-                  <img :src="chart.chart" frameborder="0" width="100%"/>
-                </div>
+              <div :key="index" class="column justify-between">
+                <img :src="chart.chart" frameborder="0" width="100%"/>
+                <p>{{ chart.text }}</p>
               </div>
             </template>
+          </div>
           </tab>
         </tabs>
       </div>
@@ -200,24 +199,10 @@ export default {
   padding: 20px 0;
 }
 
-.findings__description {
+.findings__container {
   display: grid;
-  margin: 0 0 15px;
   grid-template-columns: 1fr;
-}
-
-.findings__content h3 {
-  margin: 0 0 15px;
-  color: #110066;
-}
-
-.findings__content p {
-  margin: 0 0 15px;
-}
-
-.findings__content iframe {
-  width: 100%;
-  min-height: 400px;
+  grid-gap: 20px;
 }
 
 .tabs-component {
@@ -418,9 +403,7 @@ export default {
   .search span {
     margin: 10px;
   }
-  .findings__description {
-    align-items: center;
-    grid-gap: 20px;
+  .findings__container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
