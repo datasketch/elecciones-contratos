@@ -7,7 +7,7 @@
         </template>
         <div slot="body" class="column">
           <p style="margin: 0 0 10px">{{ modal.info.text }}</p>
-          <nuxt-link class="button item-end" :to="'/candidatos?node_id=' + modal.info.iden">Ver más</nuxt-link>
+          <nuxt-link class="button item-end" :to="'/elecciones?node_id=' + modal.info.iden">Ver más</nuxt-link>
           <iframe :src="modal.info.network" frameborder="0" width="100%" style="min-height: 500px"></iframe>
         </div>
       </Modal>
