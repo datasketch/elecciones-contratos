@@ -23,7 +23,7 @@
         </div>
       </div>
       <div class="banner__content">
-        <p>Elecciones y contratos es una solución tecnológica que permite conocer datos acerca de los candidatos a cargos de elección popular y sus financiadores. Aporta al control social y facilita la realización de cruces de información entre datos oficiales de financiación de campañas electorales suministrados por Cuentas Claras y datos de contratación pública oficiales suministrados por SECOP</p>
+        <p>Elecciones y contratos es una solución tecnológica que permite conocer datos acerca de los candidatos a cargos de elección popular y sus financiadores. Aporta al control social y facilita la realización de cruces de información entre datos oficiales de financiación de campañas electorales suministrados por Cuentas Claras y datos de contratación pública oficiales suministrados por SECOP.</p>
       </div>
     </div>
     <!-- Search -->

@@ -2,21 +2,21 @@
     {
         "title": "Datos públicos complementarios",
         "description": "Datos capturados de múltiples bases de datos pública como SISBEN, Registraduría, SECOP, Procuraduría, Policía, etc",
-        "link": "/datos/db-public-elecciones-contratos.csv"
+        "link": "/datos/db-public-elecciones-contratos.xlsx"
     },
     {
         "title": "Personas - Candidatos y Financiadores",
         "description": "Datos de Cuentas Claras organizados por personas. Cada fila corresponde a una candidato o un financiador, para elecciones Regionales 2015 y Congreso 2018.",
-        "link": "/datos/nodes.csv"
+        "link": "/datos/nodes.xlsx"
     },
     {
         "title": "Relaciones de financiación",
         "description": "Datos de Cuentas Claras organizados por las relaciones de financiación. Cada fila corresponde a un aporte realizado por un financiador a una campaña para elecciones Regionales 2015 y Congreso 2018. Agregados por el total de aportes.",
-        "link": "/datos/edges.csv"
+        "link": "/datos/edges.xlsx"
     },
     {
         "title": "Relaciones de financiación - detalle",
         "description": "Datos de Cuentas Claras organizados por las relaciones de financiación. Cada fila corresponde a un aporte realizado por un financiador a una campaña para elecciones Regionales 2015 y Congreso 2018. Cuenta con más detalle de las transacciones individuales.",
-        "link": "/datos/edges-full.csv"
+        "link": "/datos/edges-full.xlsx"
     }
 ]
