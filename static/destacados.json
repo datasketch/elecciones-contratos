@@ -3,12 +3,12 @@
 		"title": "Regionales 2015",
 		"charts": [
 			{
-				"chart":"/viz/destacados/regionales_linea.html",
+				"chart":"/viz/destacados/regionales_lineas.png",
 				"title": "Histórico de la relación entre financiación de campañas electorales regionales y contratación pública",
 				"text": "El 2017 fue el año en el que más se han otorgado contratos a financiadores de campañas electorales regionales, en ese año 7.818 personas naturales financiadoras y 317 personas jurídicas financiadoras obtuvieron contratos. Entre los financiadores con más contratos obtenidos en 2017 se destacan Abdul Rahan Mustafa Dasuki Dasuki quien obtuvo 5 contratos, y Almacenes Éxito con 590 contratos."
 			},
 			{
-				"chart":"/viz/destacados/regionales_barras.html",
+				"chart":"/viz/destacados/regionales_barras.png",
 				"title": "Departamentos en los que los financiadores de campañas regionales han obtenido contratos",
 				"text": "Antioquia, Bogotá, Cundinamarca y Valle del Cauca son los territorios en los que más financiadores de campañas electorales regionales ejecutaron contratos en 2017, en ese año 934 financiadores obtuvieron contratos en Antioquia, 734 financiadores obtuvieron contratos en Bogotá, 703 en Cundinamarca y 595 en el Valle del Cauca. Entre los financiadores con más contratos obtenidos en 2017 en esos territorios se destacan: el Banco BBVA, la Caja de compensación familiar COMPENSAR, Colombiana de Comercio S.A., y el Partido Cambio Radical."
 			}
@@ -18,12 +18,12 @@
 		"title": "Congreso 2018",
 		"charts": [
 			{
-				"chart":"/viz/destacados/congreso_linea.html",
+				"chart":"/viz/destacados/congreso_lineas.png",
 				"title": "Histórico de número de financiadores de campañas al Congreso con contratos en SECOP según el tipo de persona (Natural o Jurídica)",
 				"text": "El 2016 fue el año en el que más se han otorgado contratos a financiadores de campañas electorales al Congreso, en ese año 919 personas naturales financiadoras y 187 personas jurídicas financiadoras obtuvieron contratos. Entre los financiadores con más contratos obtenidos en 2016 se destacan Elizabeth Cristina Muñoz Escobar quien obtuvo 77 contratos, y el Partido Cambio Radical con 5.304 contratos."
 			},
 			{
-				"chart":"/viz/destacados/congreso_barras.html",
+				"chart":"/viz/destacados/congreso_barras.png",
 				"title": "Departamentos en los que los financiadores de campañas al Congreso han obtenido contratos",
 				"text": "Bogotá, Antioquia, Valle del Cauca y Santander son los territorios en los que más financiadores de campañas electorales al Congreso ejecutaron contratos en 2016, en ese año 288 financiadores obtuvieron contratos en Bogotá, 141 financiadores obtuvieron contratos en Antioquia, 114 en Valle del Cauca y 70 en Santander. Entre los financiadores con más contratos obtenidos en 2016 en esos territorios se destacan: Caracol Televisión S.A., el Partido Cambio Radical, Bancolombia S.A., y la Aseguradora Solidaria de Colombia."
 			}

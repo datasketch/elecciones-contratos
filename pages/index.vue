@@ -55,7 +55,7 @@
                 <h3>{{ chart.title }}</h3>
                 <div class="findings__description">
                   <p>{{ chart.text }}</p>
-                  <iframe :src="chart.chart" frameborder="0"></iframe>
+                  <img :src="chart.chart" frameborder="0" width="100%"/>
                 </div>
               </div>
             </template>

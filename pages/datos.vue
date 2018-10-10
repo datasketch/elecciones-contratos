@@ -7,7 +7,10 @@
       <div v-for="(dato, index) in datos" :key="index" class="column dato">
         <p class="dato__title">{{dato.title}}</p>
         <p class="dato__summary">{{dato.description}}</p>
-        <a :href="dato.link" class="button item-start">Descargar</a>
+        <div class="line">
+          <a :href="dato.xlsx" class="button">Descargar xlsx</a>
+          <a :href="dato.csv" class="button">Descargar csv</a>
+        </div>
       </div>
     </div>
   </main>
@@ -32,6 +35,10 @@ export default {
 </script>
 
 <style scoped>
+.button {
+  margin-right: 5px;
+}
+
 .dato__title {
   font-size: large;
   margin: 0 0 15px;
