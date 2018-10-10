@@ -6,7 +6,8 @@
     </p>
     <p class="line justify-between v-centered">
       <span class="charge">Aspiró a: {{ person.cargo }}</span>
-      <nuxt-link class="column centered" :to="'/candidatos?node_id=' + person.iden">Ver más</nuxt-link>
+      <nuxt-link  v-if="external" class="column centered" :to="'/elecciones?node_id=' + person.iden">Ver más</nuxt-link>
+      <a v-if="!external" style="cursor: pointer" @click.prevent="onclick(person.iden)" class="column centered">Ver más</a>
     </p>
   </div>
 </template>
@@ -18,6 +19,13 @@ export default {
     person: {
       type: Object,
       required: true
+    },
+    external: {
+      type: Boolean,
+      default: true
+    },
+    onclick: {
+      type: Function
     }
   },
   filters: {

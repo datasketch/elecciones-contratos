@@ -44,7 +44,7 @@
     <div class="findings container">
       <h2 class="subtitle">Datos destacados</h2>
       <div class="findings__tabs">
-        <tabs :options="{ useUrlFragment: false }" @changed="tabChanged">
+        <tabs :options="{ useUrlFragment: false }">
           <tab
             v-for="(item, index) in destacados"
             :key="index"
@@ -373,6 +373,7 @@ export default {
 .modal-enter-active, .modal-leave-active {
   transition: all 0.3s ease-in-out;
 }
+
 @media screen and (min-width: 768px) {
   .banner {
     grid-template-columns: 0.7fr 1fr;
