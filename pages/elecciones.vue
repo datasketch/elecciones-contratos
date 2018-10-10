@@ -39,7 +39,8 @@ export default {
   },
   data () {
     return {
-      url: 'https://randommonkey.shinyapps.io/elecciones-contratos-networks/',
+      baseUrl: 'https://randommonkey.shinyapps.io/elecciones-contratos-networks/',
+      url: '',
       query: '',
       findings: [],
       search: '',
@@ -49,6 +50,7 @@ export default {
   },
   created () {
     const query = this.$route.query
+    this.url = this.baseUrl
     this.query = query.node_id
     if (this.query) {
       this.url = this.url + `?node_id=${this.query}`
@@ -66,7 +68,7 @@ export default {
   methods: {
     changeSrc (iden) {
       this.list = []
-      this.url = this.url + `?node_id=${iden}`
+      this.url = this.baseUrl + `?node_id=${iden}`
     },
     filter () {
       this.loading = true
