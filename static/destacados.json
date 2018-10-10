@@ -1,22 +1,32 @@
 [
 	{
-		"chart":"/viz/destacados/aportes.html",
-		"title": "Aportes",
-		"text": "Los tipos de aporte hechos en las campañas son clasificados como: aporte, crédito, especie, donación y  contribución. Filtrando la base de datos por donación y sólo con candidatos que recibieron aportes de terceros, se encontró que en las elecciones de Autoridades Locales de 2015 se realizaron donaciones por un total de $67.111.777.097, donde el candidato con una mayor cantidad de donaciones para su campaña fue Enrique Peñalosa, elegido alcalde de Bogotá. Por otro lado, en las elecciones de Congreso en 2018 se realizaron donaciones por un total de $54.729.419.333. En este caso el electo Senador Álvaro Uribe fue quien recibió más donaciones para la campaña."
+		"title": "Regionales 2015",
+		"charts": [
+			{
+				"chart":"/viz/destacados/regionales_linea.html",
+				"title": "Histórico de la relación entre financiación de campañas electorales regionales y contratación pública",
+				"text": "El 2017 fue el año en el que más se han otorgado contratos a financiadores de campañas electorales regionales, en ese año 7.818 personas naturales financiadoras y 317 personas jurídicas financiadoras obtuvieron contratos. Entre los financiadores con más contratos obtenidos en 2017 se destacan Abdul Rahan Mustafa Dasuki Dasuki quien obtuvo 5 contratos, y Almacenes Éxito con 590 contratos."
+			},
+			{
+				"chart":"/viz/destacados/regionales_barras.html",
+				"title": "Departamentos en los que los financiadores de campañas regionales han obtenido contratos",
+				"text": "Antioquia, Bogotá, Cundinamarca y Valle del Cauca son los territorios en los que más financiadores de campañas electorales regionales ejecutaron contratos en 2017, en ese año 934 financiadores obtuvieron contratos en Antioquia, 734 financiadores obtuvieron contratos en Bogotá, 703 en Cundinamarca y 595 en el Valle del Cauca. Entre los financiadores con más contratos obtenidos en 2017 en esos territorios se destacan: el Banco BBVA, la Caja de compensación familiar COMPENSAR, Colombiana de Comercio S.A., y el Partido Cambio Radical."
+			}
+		]
 	},
 	{
-		"chart":"/viz/destacados/gastos.html",
-		"title": "Gastos",
-		"text": "Sumando el total de aportes realizados en las campañas por candidato y suponiendo que utilizaron todo en su campaña, se descubrió que los candidatos al Congreso 2018 gastaron en total $258.580.370.533 de los cuales el 51.4% fue gasto de candidatos a Cámara de Representantes y 48.6% corresponde a candidatos al Senado de la República. Los 3 candidatos que más invirtieron en su campaña fueron Armando Benedetti, Álvaro Uribe y Jorge Enrique Robledo."
-	},
-	{
-		"chart":"/viz/destacados/credito.html",
-		"title": "Créditos",
-		"text": "Para las elecciones de Autoridades Locales en 2015, 1,155 candidatos accedieron a créditos, dando un total de $30.325.427.857 en dineros pedidos para estas campañas, la mayoría de créditos fueron pedidos por quienes se lanzaron al concejo. Por otro lado en las elecciones de Congreso en 2018, 512 candidatos accedieron a créditos, por un total de $35.140.923.052 para las campañas, la mayoría de créditos los hicieron quienes aspiraban a llegar a la cámara."
-	},
-	{
-		"chart":"/viz/destacados/contratos.html",
-		"title": "Contratos",
-		"text": "De los 25.221 financiadores de candidatos a elecciones de Autoridades Locales en 2015, 5.830 tienen contratos registrados con el Estado, la mayoría apoyaron a candidatos a la Alcaldía. En las elecciones de congreso 2018 de los 8,185 financiadores a candidatos de esta campaña 2,100 han tenido o tienen contratos con el Estado, de estos la mayoría hicieron aportes a candidatos a la cámara de representantes. Ambos datos según el histórico 2010-2018 de SECOP."
+		"title": "Congreso 2018",
+		"charts": [
+			{
+				"chart":"/viz/destacados/congreso_linea.html",
+				"title": "Histórico de número de financiadores de campañas al Congreso con contratos en SECOP según el tipo de persona (Natural o Jurídica)",
+				"text": "El 2016 fue el año en el que más se han otorgado contratos a financiadores de campañas electorales al Congreso, en ese año 919 personas naturales financiadoras y 187 personas jurídicas financiadoras obtuvieron contratos. Entre los financiadores con más contratos obtenidos en 2016 se destacan Elizabeth Cristina Muñoz Escobar quien obtuvo 77 contratos, y el Partido Cambio Radical con 5.304 contratos."
+			},
+			{
+				"chart":"/viz/destacados/congreso_barras.html",
+				"title": "Departamentos en los que los financiadores de campañas al Congreso han obtenido contratos",
+				"text": "Bogotá, Antioquia, Valle del Cauca y Santander son los territorios en los que más financiadores de campañas electorales al Congreso ejecutaron contratos en 2016, en ese año 288 financiadores obtuvieron contratos en Bogotá, 141 financiadores obtuvieron contratos en Antioquia, 114 en Valle del Cauca y 70 en Santander. Entre los financiadores con más contratos obtenidos en 2016 en esos territorios se destacan: Caracol Televisión S.A., el Partido Cambio Radical, Bancolombia S.A., y la Aseguradora Solidaria de Colombia."
+			}
+		]
 	}
 ]

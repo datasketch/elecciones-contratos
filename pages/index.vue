@@ -43,27 +43,24 @@
     <!-- Search -->
     <div class="findings container">
       <h2 class="subtitle">Datos destacados</h2>
-      <div class="findings__content">
-        <div class="findings__description">
-          <p
-            v-for="(destacado, index) in destacados"
+      <div class="findings__tabs">
+        <tabs :options="{ useUrlFragment: false }" @changed="tabChanged">
+          <tab
+            v-for="(item, index) in destacados"
             :key="index"
-            :class="['finding', { 'no-visible': index !== 0 }]"
-            :ref="destacado.title">
-            {{ destacado.text }}
-          </p>
-        </div>
-        <div class="findings__tabs">
-          <tabs :options="{ useUrlFragment: false }" @changed="tabChanged">
-            <tab
-              v-for="(destacado, index) in destacados"
-              :key="index"
-              :name="destacado.title"
-              :id="destacado.title">
-              <iframe :src="destacado.chart" frameborder="0"></iframe>
-            </tab>
-          </tabs>
-        </div>
+            :name="item.title"
+          >
+            <template v-for="(chart, index) in item.charts">
+              <div :key="index" class="findings__content">
+                <h3>{{ chart.title }}</h3>
+                <div class="findings__description">
+                  <p>{{ chart.text }}</p>
+                  <iframe :src="chart.chart" frameborder="0"></iframe>
+                </div>
+              </div>
+            </template>
+          </tab>
+        </tabs>
       </div>
     </div>
     <div class="recommended container__inner">
@@ -122,12 +119,6 @@ export default {
     this.findings = Array.from(document.querySelectorAll('.finding'))
   },
   methods: {
-    tabChanged (selected) {
-      const id = selected.tab.id
-      const finding = this.$refs[id][0]
-      this.findings.map(p => p.classList.add('no-visible'))
-      finding.classList.remove('no-visible')
-    },
     filter () {
       this.loading = true
       debounce(this.lookup, 500)()
@@ -202,39 +193,31 @@ export default {
 }
 
 .findings {
-  padding: 40px 0;
-}
-
-.findings__content {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, auto);
-  grid-template-areas: 'description' 'tabs';
-  padding: 20px 0 0;
-}
-
-.findings__description {
-  align-self: center;
-  grid-area: description;
+  padding: 40px 0 0;
 }
 
 .findings__tabs {
-  grid-area: tabs;
+  padding: 20px 0;
 }
 
-.findings__tabs iframe {
+.findings__description {
+  display: grid;
+  margin: 0 0 15px;
+  grid-template-columns: 1fr;
+}
+
+.findings__content h3 {
+  margin: 0 0 15px;
+  color: #110066;
+}
+
+.findings__content p {
+  margin: 0 0 15px;
+}
+
+.findings__content iframe {
   width: 100%;
   min-height: 400px;
-}
-
-.finding {
-  align-self: center;
-  color: #6989C2;
-}
-
-.finding.no-visible {
-  display: none;
 }
 
 .tabs-component {
@@ -246,7 +229,7 @@ export default {
 .tabs-component-tabs {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   list-style-type: none;
   padding: 0;
   background: #F6F9FE;
@@ -255,7 +238,7 @@ export default {
 .tabs-component-tab {
   background: #F6F9FE;
   border-bottom: 5px solid transparent;
-  padding: 5px 15px;
+  padding: 10px;
   text-align: center;
   transition: border-bottom 0.15s;
 }
@@ -381,12 +364,10 @@ export default {
 
 .modal-enter, .modal-leave-to {
   opacity: 0;
-  /* transform: scale(0); */
 }
 
 .modal-leave, .modal-enter-to {
   opacity: 1;
-  /* transform: scale(1); */
 }
 
 .modal-enter-active, .modal-leave-active {
@@ -408,12 +389,6 @@ export default {
   .banner__icons img:nth-of-type(1) {
     margin-left: 0;
   }
-  .findings__content {
-    grid-template-columns: 0.7fr 1fr;
-    grid-template-rows: none;
-    grid-template-areas: 'description tabs';
-    grid-gap: 40px;
-  }
   .suffix {
     font-size: 14px;
   }
@@ -421,7 +396,7 @@ export default {
     flex-direction: row;
   }
   .tabs-component-tab-a {
-    font-size: 16px;
+    font-size: 20px;
   }
   .recommended {
     display: grid;
@@ -441,6 +416,11 @@ export default {
   }
   .search span {
     margin: 10px;
+  }
+  .findings__description {
+    align-items: center;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 </style>
