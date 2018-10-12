@@ -9,18 +9,18 @@
         "title": "Personas - Candidatos y Financiadores",
         "description": "Datos de Cuentas Claras organizados por personas. Cada fila corresponde a una candidato o un financiador, para elecciones Regionales 2015 y Congreso 2018.",
         "xlsx": "/datos/nodes.xlsx",
-        "csv": "/datos/nodes.xlsx"
+        "csv": "/datos/nodes.csv"
     },
     {
         "title": "Relaciones de financiación",
         "description": "Datos de Cuentas Claras organizados por las relaciones de financiación. Cada fila corresponde a un aporte realizado por un financiador a una campaña para elecciones Regionales 2015 y Congreso 2018. Agregados por el total de aportes.",
         "xlsx": "/datos/edges.xlsx",
-        "csv": "/datos/edges.xlsx"
+        "csv": "/datos/edges.csv"
     },
     {
         "title": "Relaciones de financiación - detalle",
         "description": "Datos de Cuentas Claras organizados por las relaciones de financiación. Cada fila corresponde a un aporte realizado por un financiador a una campaña para elecciones Regionales 2015 y Congreso 2018. Cuenta con más detalle de las transacciones individuales.",
         "xlsx": "/datos/edges-full.xlsx",
-        "csv": "/datos/edges-full.xlsx"
+        "csv": "/datos/edges-full.csv"
     }
 ]

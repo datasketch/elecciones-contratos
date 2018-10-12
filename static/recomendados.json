@@ -12,7 +12,7 @@
 		"persona_juridica": "Persona Natural",
 		"n_contratos_secop": 4,
 		"contratos_secop": "si",
-		"text": "Las conexiones son financiadores. El tamaño de las conexiones corresponde al número de contratos que han tenido con el estado. Se puede diferencias si son personas naturales o jurídicas de acuerdo a su color. Los puntos blancos, son financiadores que no tienen contratos reportados en SECOP.",
+		"text": "Las conexiones son financiadores. El grosor de las conexiones corresponde al valor de la financiación, cuyo valor aparece expresado en millones. Los cuadros representan a las personas financiadoras con contratos en SECOP y los círculos representan a las personas financiadoras sin contratos en SECOP. Adicionalmente, los financiadores que son personas jurídicas aparecen en azul y las personas naturales financiadoras se muestran en rojo.",
 		"network": "/viz/network/enrique-penalosa-londono.html"
 	},
 	{
@@ -28,7 +28,7 @@
 		"persona_juridica": "Persona Natural",
 		"n_contratos_secop": 2,
 		"contratos_secop": "no",
-		"text": "Las conexiones son financiadores. El tamaño de las conexiones corresponde al número de contratos que han tenido con el estado. Se puede diferencias si son personas naturales o jurídicas de acuerdo a su color. Los puntos blancos, son financiadores que no tienen contratos reportados en SECOP.",
+		"text": "Las conexiones son financiadores. El grosor de las conexiones corresponde al valor de la financiación, cuyo valor aparece expresado en millones. Los cuadros representan a las personas financiadoras con contratos en SECOP y los círculos representan a las personas financiadoras sin contratos en SECOP. Adicionalmente, los financiadores que son personas jurídicas aparecen en azul y las personas naturales financiadoras se muestran en rojo.",
 		"network": "/viz/network/antanas-mockus.html"
 	},
 	{
@@ -44,7 +44,7 @@
 		"persona_juridica": "Persona Natural",
 		"n_contratos_secop": 2,
 		"contratos_secop": "no",
-		"text": "Las conexiones son financiadores. El tamaño de las conexiones corresponde al número de contratos que han tenido con el estado. Se puede diferencias si son personas naturales o jurídicas de acuerdo a su color. Los puntos blancos, son financiadores que no tienen contratos reportados en SECOP.",
+		"text": "Las conexiones son financiadores. El grosor de las conexiones corresponde al valor de la financiación, cuyo valor aparece expresado en millones. Los cuadros representan a las personas financiadoras con contratos en SECOP y los círculos representan a las personas financiadoras sin contratos en SECOP. Adicionalmente, los financiadores que son personas jurídicas aparecen en azul y las personas naturales financiadoras se muestran en rojo.",
 		"network": "/viz/network/arturo-char-chaljub.html"
 	},
 	{
@@ -58,7 +58,7 @@
 		"n_contratos_secop": 4,
 		"contratos_secop": "no",
 		"municipio": "BOGOTA D.C.",
-		"text": "Las conexiones son financiadores. El tamaño de las conexiones corresponde al número de contratos que han tenido con el estado. Se puede diferencias si son personas naturales o jurídicas de acuerdo a su color. Los puntos blancos, son financiadores que no tienen contratos reportados en SECOP.",
+		"text": "Las conexiones son financiadores. El grosor de las conexiones corresponde al valor de la financiación, cuyo valor aparece expresado en millones. Los cuadros representan a las personas financiadoras con contratos en SECOP y los círculos representan a las personas financiadoras sin contratos en SECOP. Adicionalmente, los financiadores que son personas jurídicas aparecen en azul y las personas naturales financiadoras se muestran en rojo.",
 		"network": "/viz/network/armando-alberto-benedetti-villaneda.html"
 	},
 	{
@@ -74,13 +74,13 @@
 		"persona_juridica": "Persona Natural",
 		"n_contratos_secop": 5,
 		"contratos_secop": "no",
-		"text": "Las conexiones son financiadores. El tamaño de las conexiones corresponde al número de contratos que han tenido con el estado. Se puede diferencias si son personas naturales o jurídicas de acuerdo a su color. Los puntos blancos, son financiadores que no tienen contratos reportados en SECOP.",
+		"text": "Las conexiones son financiadores. El grosor de las conexiones corresponde al valor de la financiación, cuyo valor aparece expresado en millones. Los cuadros representan a las personas financiadoras con contratos en SECOP y los círculos representan a las personas financiadoras sin contratos en SECOP. Adicionalmente, los financiadores que son personas jurídicas aparecen en azul y las personas naturales financiadoras se muestran en rojo.",
 		"network": "/viz/network/alvaro-uribe-velez.html"
 	},
 	{
 		"iden": 72148060,
 		"nombre": "CESAR ROJAS",
-		"text": "Las conexiones son financiadores. El tamaño de las conexiones corresponde al número de contratos que han tenido con el estado. Se puede diferencias si son personas naturales o jurídicas de acuerdo a su color. Los puntos blancos, son financiadores que no tienen contratos reportados en SECOP.",
+		"text": "Las conexiones son financiadores. El grosor de las conexiones corresponde al valor de la financiación, cuyo valor aparece expresado en millones. Los cuadros representan a las personas financiadoras con contratos en SECOP y los círculos representan a las personas financiadoras sin contratos en SECOP. Adicionalmente, los financiadores que son personas jurídicas aparecen en azul y las personas naturales financiadoras se muestran en rojo.",
 		"network": "/viz/network/cesar-omar-rojas-ayala.html"
 	}
 ]
