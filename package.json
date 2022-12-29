@@ -20,7 +20,7 @@
     "@fortawesome/vue-fontawesome": "^0.1.1",
     "iframe-resizer": "^3.6.1",
     "lodash.debounce": "^4.0.8",
-    "nuxt": "^1.0.0",
+    "nuxt": "^3.0.0",
     "vue-tabs-component": "^1.4.0"
   },
   "devDependencies": {
@@ -28,7 +28,7 @@
     "cross-env": "^5.2.0",
     "eslint": "^4.15.0",
     "eslint-friendly-formatter": "^3.0.0",
-    "eslint-loader": "^1.7.1",
+    "eslint-loader": "^4.0.2",
     "eslint-plugin-vue": "^4.0.0"
   }
 }
